@@ -41010,16 +41010,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Example = function (_Component) {
-    _inherits(Example, _Component);
+var GithubSearch = function (_Component) {
+    _inherits(GithubSearch, _Component);
 
-    function Example() {
-        _classCallCheck(this, Example);
+    function GithubSearch() {
+        _classCallCheck(this, GithubSearch);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (GithubSearch.__proto__ || Object.getPrototypeOf(GithubSearch)).apply(this, arguments));
     }
 
-    _createClass(Example, [{
+    _createClass(GithubSearch, [{
         key: 'render',
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -41037,28 +41037,48 @@ var Example = function (_Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'panel-heading' },
-                                'Example Component'
+                                'Github User Search'
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 'div',
                                 { className: 'panel-body' },
-                                'I\'m an example component!'
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'form-group' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'label',
+                                        null,
+                                        'Github Username'
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: 'form-control', type: 'text', name: 'username', placeholder: 'taylorotwell' })
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'button',
+                                    { id: 'github_search_submit_button', className: 'btn btn-primary' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { 'class': 'fa fa-search' }),
+                                    ' Search'
+                                )
                             )
                         )
                     )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'row' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'github_search_results', className: 'col-md-8 col-md-offset-2' })
                 )
             );
         }
     }]);
 
-    return Example;
+    return GithubSearch;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Example);
+/* harmony default export */ __webpack_exports__["default"] = (GithubSearch);
 
 
-if (document.getElementById('example')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('example'));
+if (document.getElementById('github_search')) {
+    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(GithubSearch, null), document.getElementById('github_search'));
 }
 
 /***/ }),
